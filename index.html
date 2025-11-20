@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Samudra - [Nama Anda]</title>
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Memuat Ikon Lucide untuk tampilan yang lebih modern -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Mengatur font Inter sebagai standar */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f8ff; /* Biru muda sangat terang */
+            color: #1e3a8a; /* Biru tua untuk teks utama */
+            scroll-behavior: smooth;
+        }
+
+        /* Tema Warna Lautan */
+        .ocean-dark { background-color: #1e3a8a; } /* Biru Tua Samudra */
+        .ocean-primary { background-color: #06b6d4; } /* Teal/Cyan Cerah */
+        .ocean-accent { color: #06b6d4; } /* Aksen Teal/Cyan */
+
+        /* Efek latar belakang ombak/kedalaman */
+        .wave-bg {
+            background: linear-gradient(180deg, #f0f8ff 0%, #e0f2fe 50%, #bae6fd 100%);
+        }
+
+        /* Styling card proyek agar terlihat seperti blok karang */
+        .project-card {
+            box-shadow: 0 10px 15px -3px rgba(30, 58, 138, 0.1), 
+                        0 4px 6px -2px rgba(30, 58, 138, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #7dd3fc;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(6, 182, 212, 0.2), 
+                        0 8px 10px -6px rgba(6, 182, 212, 0.1);
+        }
+    </style>
+</head>
+<body class="wave-bg">
+
+    <!-- Header & Navigasi -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-700 hover:ocean-accent transition duration-300">
+                Oceanic Dev
+            </a>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#beranda" class="text-blue-700 hover:ocean-accent transition duration-300">Beranda</a>
+                <a href="#proyek" class="text-blue-700 hover:ocean-accent transition duration-300">Penemuan (Proyek)</a>
+                <a href="#keahlian" class="text-blue-700 hover:ocean-accent transition duration-300">Alat Selam (Keahlian)</a>
+                <a href="#kontak" class="text-blue-700 hover:ocean-accent transition duration-300">Jaring Kontak</a>
+            </nav>
+            <!-- Tombol Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-blue-700 hover:bg-blue-100">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <!-- Menu Mobile (Tersembunyi secara default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-50 border-t border-blue-200">
+            <nav class="flex flex-col space-y-1 p-3">
+                <a href="#beranda" class="text-blue-700 hover:ocean-accent p-2 rounded-lg">Beranda</a>
+                <a href="#proyek" class="text-blue-700 hover:ocean-accent p-2 rounded-lg">Penemuan (Proyek)</a>
+                <a href="#keahlian" class="text-blue-700 hover:ocean-accent p-2 rounded-lg">Alat Selam (Keahlian)</a>
+                <a href="#kontak" class="text-blue-700 hover:ocean-accent p-2 rounded-lg">Jaring Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto">
+
+        <!-- Bagian Beranda (Hero) - Kedalaman Biru -->
+        <section id="beranda" class="py-20 sm:py-32 text-center min-h-screen flex items-center justify-center pt-24 px-4 bg-blue-100/50">
+            <div class="max-w-4xl mx-auto">
+                <!-- Placeholder Image - Ikon Lautan -->
+                <div class="w-24 h-24 mx-auto mb-6 p-4 rounded-full bg-blue-700 text-white shadow-xl flex items-center justify-center">
+                    <i data-lucide="anchor" class="w-12 h-12"></i>
+                </div>
+
+                <h1 class="text-5xl sm:text-6xl font-extrabold mb-4 text-blue-900 leading-tight">
+                    [Zamrud]: Penyelam Digital
+                </h1>
+                <p class="text-xl sm:text-2xl text-blue-700 mb-8 max-w-3xl mx-auto">
+                    Mengeksplorasi kedalaman kode dan menemukan permata tersembunyi. Portofolio ini adalah peta penemuan saya di dunia pengembangan.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#proyek" class="px-8 py-3 text-white font-semibold rounded-full shadow-lg ocean-primary hover:bg-cyan-500 transition duration-300 transform hover:scale-105">
+                        Telusuri Penemuan
+                    </a>
+                    <a href="#kontak" class="px-8 py-3 bg-blue-700 text-white font-semibold rounded-full shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105">
+                        Tebarkan Jaring
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Proyek (Penemuan) -->
+        <section id="proyek" class="py-20 px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Penemuan (Proyek Terbaru)</h2>
+            <p class="text-center text-blue-700 mb-16 max-w-3xl mx-auto">
+                Setiap proyek adalah eksplorasi mendalam, mulai dari navigasi data hingga desain antarmuka yang jernih seperti air.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Kartu Proyek 1: Peta Navigasi -->
+                <div class="bg-white rounded-xl p-6 project-card">
+                    <div class="ocean-accent mb-4"><i data-lucide="map" class="w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-900">Peta Navigasi Data</h3>
+                    <p class="text-blue-700 mb-4">
+                        Aplikasi visualisasi data yang membantu "berlayar" melalui set data kompleks, mengubah angka menjadi wawasan yang jernih.
+                    </p>
+                    <div class="flex space-x-3 text-sm font-medium text-cyan-600">
+                        <span>#Visualisasi</span><span>#Data</span><span>#D3JS</span>
+                    </div>
+                    <a href="#" class="mt-4 inline-block ocean-accent hover:text-cyan-600 font-medium">
+                        Lihat Kedalaman <i data-lucide="arrow-right" class="inline w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Kartu Proyek 2: Simulasi Arus -->
+                <div class="bg-white rounded-xl p-6 project-card">
+                    <div class="ocean-accent mb-4"><i data-lucide="activity" class="w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-900">Simulasi Arus Digital</h3>
+                    <p class="text-blue-700 mb-4">
+                        Sebuah model interaktif front-end yang mensimulasikan pergerakan fluida atau arus lalu lintas data.
+                    </p>
+                    <div class="flex space-x-3 text-sm font-medium text-cyan-600">
+                        <span>#Animasi</span><span>#Canvas</span><span>#Frontend</span>
+                    </div>
+                    <a href="#" class="mt-4 inline-block ocean-accent hover:text-cyan-600 font-medium">
+                        Lihat Kedalaman <i data-lucide="arrow-right" class="inline w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Kartu Proyek 3: Buku Harian Kapten -->
+                <div class="bg-white rounded-xl p-6 project-card">
+                    <div class="ocean-accent mb-4"><i data-lucide="book-open-text" class="w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-900">Buku Harian Kapten</h3>
+                    <p class="text-blue-700 mb-4">
+                        Sistem manajemen konten yang rapi (seperti blog), tempat saya mendokumentasikan perjalanan coding dan penemuan baru.
+                    </p>
+                    <div class="flex space-x-3 text-sm font-medium text-cyan-600">
+                        <span>#CMS</span><span>#Dokumentasi</span><span>#DesainUI</span>
+                    </div>
+                    <a href="#" class="mt-4 inline-block ocean-accent hover:text-cyan-600 font-medium">
+                        Lihat Kedalaman <i data-lucide="arrow-right" class="inline w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Keahlian (Alat Selam) -->
+        <section id="keahlian" class="py-20 px-4 bg-blue-50/70">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Alat Selam (Keahlian)</h2>
+            <p class="text-center text-blue-700 mb-10 max-w-3xl mx-auto">
+                Perlengkapan yang memastikan saya dapat menjelajah dan membangun di kedalaman digital.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center max-w-4xl mx-auto">
+                <!-- Skill 1: HTML/CSS -->
+                <div class="p-4 bg-white rounded-xl shadow-lg border border-blue-200 hover:ring-2 ring-cyan-500 transition duration-300">
+                    <div class="ocean-accent mb-2 mx-auto"><i data-lucide="code" class="w-8 h-8"></i></div>
+                    <h3 class="font-semibold text-blue-900">HTML & CSS</h3>
+                    <p class="text-xs text-blue-600">Dasar Kapal</p>
+                </div>
+
+                <!-- Skill 2: JavaScript -->
+                <div class="p-4 bg-white rounded-xl shadow-lg border border-blue-200 hover:ring-2 ring-cyan-500 transition duration-300">
+                    <div class="text-yellow-500 mb-2 mx-auto"><i data-lucide="zap" class="w-8 h-8"></i></div>
+                    <h3 class="font-semibold text-blue-900">JavaScript</h3>
+                    <p class="text-xs text-blue-600">Mesin Penggerak</p>
+                </div>
+
+                <!-- Skill 3: Tailwind/Bootstrap -->
+                <div class="p-4 bg-white rounded-xl shadow-lg border border-blue-200 hover:ring-2 ring-cyan-500 transition duration-300">
+                    <div class="text-emerald-500 mb-2 mx-auto"><i data-lucide="layout-grid" class="w-8 h-8"></i></div>
+                    <h3 class="font-semibold text-blue-900">Tailwind CSS</h3>
+                    <p class="text-xs text-blue-600">Kemudi Responsif</p>
+                </div>
+
+                <!-- Skill 4: Git -->
+                <div class="p-4 bg-white rounded-xl shadow-lg border border-blue-200 hover:ring-2 ring-cyan-500 transition duration-300">
+                    <div class="text-red-500 mb-2 mx-auto"><i data-lucide="git-branch" class="w-8 h-8"></i></div>
+                    <h3 class="font-semibold text-blue-900">Git & Github</h3>
+                    <p class="text-xs text-blue-600">Jurnal Log</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Kontak (Jaring Kontak) -->
+        <section id="kontak" class="py-20 px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Tebarkan Jaring Kontak</h2>
+            <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-2xl border-t-8 border-cyan-400">
+                <p class="text-blue-700 text-center mb-6">
+                    Mari kita berlayar bersama. Hubungi saya untuk peluang kolaborasi atau proyek baru!
+                </p>
+
+                <!-- Formulir Kontak (Fungsionalitas Simulasi) -->
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label for="nama_lautan" class="block text-sm font-medium text-blue-700 mb-1">Nama Kapten (Anda)</label>
+                        <input type="text" id="nama_lautan" name="nama" required class="w-full px-4 py-2 bg-blue-50 border border-blue-300 rounded-lg text-blue-900 focus:ring-cyan-500 focus:border-cyan-500">
+                    </div>
+                    <div>
+                        <label for="email_lautan" class="block text-sm font-medium text-blue-700 mb-1">Alamat Email</label>
+                        <input type="email" id="email_lautan" name="email" required class="w-full px-4 py-2 bg-blue-50 border border-blue-300 rounded-lg text-blue-900 focus:ring-cyan-500 focus:border-cyan-500">
+                    </div>
+                    <div>
+                        <label for="pesan_lautan" class="block text-sm font-medium text-blue-700 mb-1">Pesan di Dalam Botol</label>
+                        <textarea id="pesan_lautan" name="pesan" rows="4" required class="w-full px-4 py-2 bg-blue-50 border border-blue-300 rounded-lg text-blue-900 focus:ring-cyan-500 focus:border-cyan-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-4 py-2 text-white font-bold rounded-lg ocean-primary hover:bg-cyan-600 transition duration-300 transform hover:scale-[1.01]">
+                        Kirim Pesan
+                    </button>
+                    <!-- Pesan Feedback Form (Simulasi) -->
+                    <p id="form-message" class="text-center pt-2 text-green-700 font-semibold hidden"></p>
+                </form>
+
+                <!-- Ikon Sosial Media -->
+                <div class="flex justify-center space-x-6 mt-8 pt-6 border-t border-blue-200">
+                    <a href="#" target="_blank" class="text-blue-700 hover:text-cyan-500 transition duration-300" title="Github">
+                        <i data-lucide="github" class="w-8 h-8"></i>
+                    </a>
+                    <a href="#" target="_blank" class="text-blue-700 hover:text-cyan-500 transition duration-300" title="LinkedIn">
+                        <i data-lucide="linkedin" class="w-8 h-8"></i>
+                    </a>
+                    <a href="#" target="_blank" class="text-blue-700 hover:text-cyan-500 transition duration-300" title="Twitter/X">
+                        <i data-lucide="twitter" class="w-8 h-8"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer - Dasar Laut -->
+    <footer class="ocean-dark mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-blue-200">
+            <p>&copy; 2024 Oceanic Portfolio | Dibuat dengan ketulusan seperti kedalaman laut.</p>
+            <p class="text-sm mt-2">Didesain oleh [Nama Anda].</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Inisialisasi ikon Lucide
+        lucide.createIcons();
+
+        // 1. Logika Toggle Menu Mobile
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // 2. Logika Formulir Kontak (Simulasi Fungsional)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const messageEl = document.getElementById('form-message');
+            
+            // Simulasikan pengiriman data (Data hanya di-log ke konsol)
+            const formData = new FormData(this);
+            console.log("Formulir Kontak Terkirim (Simulasi Lautan):");
+            for (let [key, value] of formData.entries()) {
+                console.log(`${key}: ${value}`);
+            }
+
+            // Tampilkan pesan sukses dan sembunyikan setelah beberapa detik
+            messageEl.textContent = 'Pesan Anda telah dilempar ke laut dan berhasil saya tangkap!';
+            messageEl.classList.remove('hidden');
+            this.reset(); // Kosongkan formulir
+
+            setTimeout(() => {
+                messageEl.classList.add('hidden');
+            }, 3000);
+
+            // Tutup menu mobile jika sedang terbuka setelah pengiriman (untuk UX mobile)
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+
+        // 3. Logika Navigasi: Tutup menu mobile setelah klik link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+    </script>
+</body>
+</html>
+
+
